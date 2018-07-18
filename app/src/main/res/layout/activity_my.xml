@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,18 +8,36 @@
     >
 
     <EditText android:id="@+id/edit_messages"
-        android:layout_weight="1"
-        android:layout_width="0dp"
+        android:layout_weight="wrap _content"
         android:layout_height="wrap_content"
         android:hint="@string/edit_message" />
-    <Button
+
+
+    <Button android:id="@+id/button_send"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button_send" />
+        android:text="@string/button_send"
+        android:layout_topright="@+id/edit_messages" />
+
+    <EditText android:id="@+id/edit_messages1"
+        android:layout_weight="wrap _content"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_message"
+        android:layout_below="@+id/edit_messages"/>
+
+    <Button android:id="@+id/button_send1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_send"
+        android:layout_below="@+id/button_send"
+        android:layout_topright="@+id/edit_messages1" />
 
 
 
 
 
 
-</LinearLayout>
+
+
+
+</RelativeLayout>
